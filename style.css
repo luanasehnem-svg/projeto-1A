@@ -1,1 +1,260 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
 
+:root {
+    --rosa-claro: #FFF5F5;
+    --rosa-medio: #F7D6D6;
+    --dourado: #D4AF37;
+    --texto-escuro: #333333;
+    --branco: #FFFFFF;
+}
+
+body {
+    color: var(--texto-escuro);
+    background-color: var(--branco);
+    line-height: 1.6;
+}
+
+/* Menu de Navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--branco);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--texto-escuro);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--dourado);
+}
+
+.btn-menu {
+    background-color: var(--rosa-medio);
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+/* Seção Hero (Banner Principal) */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(255, 245, 245, 0.7), rgba(255, 245, 245, 0.7)), 
+                url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1920') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--dourado);
+    font-style: italic;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn-principal {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: var(--texto-escuro);
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: var(--dourado);
+}
+
+/* Seção de Serviços */
+.servicos {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: var(--branco);
+}
+
+.servicos h2, .sobre h2, .contato h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.cards-servicos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--rosa-claro);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.preco {
+    font-weight: bold;
+    color: var(--dourado);
+    font-size: 18px;
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 80px 10%;
+    background-color: var(--rosa-claro);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sobre-texto {
+    max-width: 800px;
+}
+
+.sobre h2 {
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Seção Contato */
+.contato {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: var(--branco);
+}
+
+.contato-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-contato p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+    background-color: #20ba5a;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--texto-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav ul {
+        margin-top: 15px;
+    }
+    .hero {
+        text-align: center;
+        padding: 0 5%;
+    }
+    .hero-content h1 {
+        font-size: 36px;
+    }
+}
